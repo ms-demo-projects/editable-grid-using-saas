@@ -1,0 +1,400 @@
+$main-font-size : 14px;
+$main-font : 'Muli', sans-serif;
+
+$main-transition-effect : 0.2s all ease-in;
+
+$P50 : 50%;
+$P100 : 100%;
+
+$block : block;
+$none : none;
+$inline : inline;
+$inline-block : inline-block;
+
+$relative : relative;
+$absolute : absolute;
+$fixed : fixed;
+
+$top : top;
+$right : right;
+$left : left;
+$center : center;
+
+$pointer : pointer;
+
+$uppercase : uppercase;
+$capitalize : capitalize;
+
+$lighter : lighter;
+$bold : bold;
+
+body{
+  font-family : $main-font;
+  font-size: $main-font-size;
+  color: $main-text-color;
+  margin: $D0;
+  padding: $D0;
+}
+h1,h2,h3,h4,h5{
+  margin: $D0;
+  padding: $D0;
+  font-weight: $lighter;
+}
+ul{
+  padding-left: $D0;
+}
+ul li{
+  list-style: $none;
+}
+a{
+  cursor: $pointer;
+}
+.clearfix{
+  clear: both;
+}
+.padding-row{
+  padding: $D0 $D15;
+}
+.right{
+  float: $right;
+}
+.cursor{
+  cursor: $pointer;
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+.arrow-up {
+  border-bottom: $D10 solid $white;
+  border-left: $D10 solid transparent;
+  border-right: $D10 solid transparent;
+  height: $D0;
+  position: $absolute;
+  right: $D18;
+  top: $DM10;
+  width: $D0;
+}
+span.ti-font{
+  font-size: $D20;
+}
+
+/* validation css start */
+.errorMsgStyle span{
+  color: $validation-color;
+}
+.ng-untouched.ng-dirty ~ validation {
+  display: $none;
+}
+.priority validation + validation{
+  display: $none;
+}
+/* validation css over */
+
+
+/*login css start*/
+.login-section{
+  width: 300px;
+  margin: $M-auto;
+  margin-top: $D200 !important;
+  padding: $D30;
+  background: $white;
+  position: $relative;
+}
+.login-section .ti-font{
+  position: $absolute;
+  right: $D18;
+  top: $DM40;
+  color: $white;
+}
+.login-bg{
+  background: $main-bg-color;
+  height: $P100;
+  width: $P100;
+  position: $fixed;
+  left: $D0;
+}
+/*login css over*/
+
+
+/* menu editor css start*/
+.navbar{
+  background: $main-bg-color;
+  color: $white;
+  width: $P100;
+  padding: $D12 $D0;
+  h2{
+    display: $inline;
+    font-size: $D24;
+  }
+  .project-title , .action{
+    display: $inline;
+  }
+  .action{
+    margin-top: $D5;
+  }
+  .ti-search{
+    margin-right: $D16;
+    position: $absolute;
+    right: $D0;
+    background: $main-bg-color;
+  }
+  .padding-row-header{
+    padding: $D0 $D30;
+  }
+  .profile-image-icon{
+    display: $inline-block;
+    vertical-align: $top;
+  }
+}
+
+.user-details{
+  position: $absolute;
+  right: $D0;
+  background: $white;
+  box-shadow: 0 4px 10px 5px rgba(0,0,0,.2);
+  right: $D16;
+  top: $D50;
+  width: 310px;
+  z-index: 3;
+  .arrow-up{
+    right: $D14;
+  }
+  .user-image{
+    margin: $D20;
+    display: $inline-block;
+  }
+  .user-image img{
+    border-radius: $P50;
+    height: $D75;
+    width: $D75;
+  }
+  .user-email-name{
+    display: $inline-block;
+    vertical-align: $top;
+    padding-top: $D20;
+  }
+}
+
+.fixed-bg-hide{
+  position: $fixed;
+  height: $P100;
+  width: $P100;
+  content: "";
+  left: $D0;
+  top: $D0;
+  z-index: 2;
+}
+
+.filter-menu{
+  width: 270px;
+  border-right: 1px solid #DCDCDC;
+  position: $fixed;
+  left: $D0;
+  bottom: $D0;
+  height: $P100;
+  top: $D54;
+  padding: $D30;
+  box-sizing: border-box;
+  background: $white;
+  .filter-title{
+    color: $filter-text-color;
+    font-size: $D16;
+    margin-top: $D20;
+  }
+  ul li{
+    margin-bottom: $D10;
+  }
+  ul.half-column li{
+    width: $P50;
+    float: $left;
+  }
+  .filter-icon{
+    position: $absolute;
+    right: -31px;
+    top: $D18;
+    background: $main-bg-color;
+    padding: $D5;
+    width: $D20;
+    text-align: $center;
+    color: $white;
+  }
+  .arrow-icon{
+    left: -$D20;
+    position: $relative;
+  }
+}
+/* menu editor css over */
+
+
+/* left filter css class add remove start */
+.filterMove{
+  left: -270px;
+  transition: 0.4s all ease-in;
+}
+.showFilterDiv{
+  left: 0px;
+  transition: 0.4s all ease-in;
+}
+.bodyMove{
+  left: 270px !important;
+  transition: 0.4s all ease-in;
+}
+.removeBodyMove{
+  left: 0px;
+  transition: 0.4s all ease-in;
+}
+.body-main{
+  position: $fixed;
+  left: $D0;
+  right: $D0;
+  width: $P100;
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+  height: $P100 !important;
+  .bottom-section{
+    margin-bottom: $D50;
+  }
+}
+.border-div-table{
+  border-top: $D1 solid #dddddd;
+  background: $none;
+  position: $absolute;
+  z-index: 1;
+  width: $P100;
+  top: $D58;
+}
+.border-div-table-second{
+  @extend .border-div-table;
+  top: 111px !important;
+}
+/* left filter css class add remove over */
+
+/* Grid CSS changes start */
+.ui-datatable th.ui-state-default{
+  background: $none !important;
+  border-top-color: $white !important;
+  border-right-color: $white !important;
+  border-left-color: $white !important;
+}
+.ui-datatable .ui-datatable-thead > tr > th{
+  padding-top: $D20 !important;
+  text-align: $left !important;
+  border: $none !important;
+  position: $relative;
+  &::before{
+    position: $absolute;
+    content: "\e610" ;
+    font-family: "themify";
+    color: $main-bg-color;
+    left: 180px;
+    top: $D79;
+  }
+}
+.ui-datatable .ui-datatable-data > tr > td{
+  padding: $D15 $D5 !important;
+  font-family: $main-font;
+}
+.ui-datatable .ui-datatable-data > tr > td, .ui-widget-content{
+  border: $none !important;
+}
+.ui-datatable tbody > tr.ui-widget-content{
+  background: $none !important;
+}
+th.ui-state-default.ui-unselectable-text{
+  width: $D100 !important;
+}
+.ui-column-title{
+  color: $main-bg-color;
+  font-family: $main-font;
+  font-size: $D16;
+  font-weight:600;
+}
+.ui-chkbox-box.ui-state-active{
+  background: $main-bg-color !important;
+  border-color: $main-bg-color !important;
+  box-shadow: $none !important;
+}
+.ui-datatable-tablewrapper{
+  margin-left: 5%;
+}
+.ui-column-filter.ui-inputtext{
+  background: #faf9f9;
+  border-radius: $D50;
+  border: $none;
+  padding: $D7 $D10;
+  margin-top: $D30 !important;
+  font-family: $main-font;
+  width: 200px !important;
+  &:focus{
+    box-shadow: $none;
+  }
+}
+.ui-widget-header{
+  background: $none !important;
+  border-top: 1px solid #ddd;
+  padding: $D12 $D0 !important;
+}
+.ui-widget-header .ui-state-default{
+  font-family: $main-font !important;
+}
+.ui-paginator .ui-paginator-page.ui-state-active{
+  background: $main-bg-color !important;
+}
+/* Grid CSS changes over*/
+
+.table{
+  width: 100%;
+  border-collapse: collapse;
+  thead th:first-child, tbody tr td:first-child{
+    padding-left: 5%;
+  }
+  thead th{
+    text-align: $left;
+    color: $main-bg-color;
+    font-family: $main-font;
+    font-size: $D16;
+    font-weight:600;
+    padding: $D20 $D10;
+  }
+  .search-area {
+    td{
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+    input{
+      background: #faf9f9 !important;
+      border-radius: $D50;
+      border: $none;
+      padding: $D7 $D10;
+      font-family: $main-font;
+      width: 200px !important;
+      margin: $D10 $D0;
+      &:focus{
+        box-shadow: $none;
+      }
+    }
+    span{
+      left: -30px;
+      top: $D1;
+      position: $relative;
+    }
+  }
+  .data{
+    height: $D50;
+    input{
+      padding: $D5;
+      width: 200px;
+      border: 1px solid $white;
+      font-family: $main-font;
+      font-size: $D14;
+      color: #222222;
+    }
+    input:focus{
+      border-color: #dddddd;
+      box-shadow: 0px 0px 5px #1f89ce;
+    }
+  }
+}

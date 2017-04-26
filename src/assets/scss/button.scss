@@ -1,0 +1,28 @@
+$small-padding-btn : 5px 10px;
+$padding-btn : 8px 15px;
+
+$primary-btn-background : #2c343f;
+.general-btn{
+	color : $white;
+	padding : $padding-btn;
+  cursor: $pointer;
+  text-transform: $uppercase;
+}
+
+.primary-btn{
+	@extend .general-btn;
+	background : $primary-btn-background;
+	border : $none;
+  &:focus{
+    outline: $none;
+  }
+  &:hover{
+    background: $main-hover-text-color;
+    transition: $main-transition-effect;
+  }
+}
+
+.small-btn{
+  padding: $small-padding-btn !important;
+  text-transform: $capitalize !important;
+}

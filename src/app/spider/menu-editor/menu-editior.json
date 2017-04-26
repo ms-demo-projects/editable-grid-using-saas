@@ -1,0 +1,82 @@
+{
+  "status": 200,
+  "message": "IVR List",
+  "payload": {
+    "data": [
+      {
+        "id": 1,
+        "companyName": "Cablexpress Corporation",
+        "ivrNumber": "1(800)234-2121",
+        "priority": 40,
+        "status": "Approved"
+      },
+      {
+        "id": 2,
+        "companyName": "Flowsers.com",
+        "ivrNumber": "1(800)767-3282",
+        "priority": 50,
+        "status": "Finalized"
+      },
+      {
+        "id": 3,
+        "companyName": "Air Wings",
+        "ivrNumber": "1(800)234-2122",
+        "priority": 30,
+        "status": "Pending"
+      },
+      {
+        "id": 4,
+        "companyName": "Knighter Corporation",
+        "ivrNumber": "1(800)234-2123",
+        "priority": 10,
+        "status": "Approved"
+      },
+      {
+        "id": 5,
+        "companyName": "Allergreen",
+        "ivrNumber": "1(800)234-2124",
+        "priority": 20,
+        "status": "Not approved"
+      },
+      {
+        "id": 6,
+        "companyName": "Flex.com",
+        "ivrNumber": "1(800)234-2124",
+        "priority": 40,
+        "status": "In process"
+      },
+      {
+        "id": 7,
+        "companyName": "Cablexpress Corporation",
+        "ivrNumber": "1(800)234-2121",
+        "priority": 40,
+        "status": "Approved"
+      },
+      {
+        "id": 8,
+        "companyName": "Flowsers.com",
+        "ivrNumber": "1(800)767-3282",
+        "priority": 50,
+        "status": "Finalized"
+      },
+      {
+        "id": 9,
+        "companyName": "Air Wings",
+        "ivrNumber": "1(800)234-2122",
+        "priority": 30,
+        "status": "Pending"
+      },
+      {
+        "id": 10,
+        "companyName": "Knighter Corporation",
+        "ivrNumber": "1(800)234-2123",
+        "priority": 10,
+        "status": "Approved"
+      }
+    ],
+    "pager": {
+      "recordsPerPage": 10,
+      "totalRecords": 50
+    }
+  }
+}

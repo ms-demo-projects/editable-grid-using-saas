@@ -1,0 +1,167 @@
+<!--Header HTML start-->
+<div class="navbar">
+  <div class="padding-row-header">
+    <div class="project-title">
+      <h2>VisuMenu- menu editor</h2>
+    </div>
+    <div class="action right">
+      <div class="search-container">
+        <input class="search" type="search" placeholder="Search IVR or company">
+        <div class="clear-icon"><a class="cursor"><span class="ti-close"></span></a></div>
+      </div>
+      <div class="profile-image-icon">
+        <a class="cursor" (click)="showUserDetailSection()">
+          <span class="ti-user ti-font"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Header HTML over-->
+
+<!--User Dropdown HTML start-->
+<div class="user-details" *ngIf="userDetailSection">
+  <div class="arrow-up"></div>
+  <div class="user-image">
+    <img src="../../../assets/images/user2.jpg"/></div>
+  <div class="user-email-name">
+    <h3>alexa wiliams</h3>
+    <h4>alexawiliams@gmail.com</h4>
+    <br>
+    <button class="primary-btn small-btn" (click)="back()">Logout</button>
+  </div>
+</div>
+<!--User Dropdown HTML over-->
+
+
+<!--Hide HTML layer-->
+<div class="fixed-bg-hide" (click)="hideDetailSectionEv()" *ngIf="hideDetailSection"></div>
+
+
+<!--Grid HTML start-->
+<div [ngClass]="{ 'body-main': true, 'bodyMove' : bodyMove , 'removeBodyMove' : removeBodyMove}">
+  <!--<div class="border-div-table"></div>
+  <div class="border-div-table-second"></div>-->
+  <div class="bottom-section">
+    <table class="table">
+      <thead>
+        <th width="25%">Company</th>
+        <th width="25%">IVR number</th>
+        <th width="25%">Priority</th>
+        <th width="25%">Status</th>
+      </thead>
+      <tbody>
+        <tr class="search-area">
+          <td><input type="search" placeholder="Search company" /><span class="ti-search"></span></td>
+          <td><input type="search" placeholder="Search number" /><span class="ti-search"></span></td>
+          <td><input type="search" placeholder="Search priority"/><span class="ti-search"></span></td>
+          <td><input type="search" placeholder="Search IVR" /><span class="ti-search"></span></td>
+        </tr>
+        <tr class="data">
+          <td><input type="text" value="Cablexpress Corporation" /></td>
+          <td><input type="text" value="1(800)234-2121" /></td>
+          <td><input type="text" value="40" /></td>
+          <td><input type="text" value="Approved" /></td>
+        </tr>
+        <tr class="data">
+          <td><input type="text" value="Cablexpress Corporation" /></td>
+          <td><input type="text" value="1(800)234-2121" /></td>
+          <td><input type="text" value="40" /></td>
+          <td><input type="text" value="Approved" /></td>
+        </tr>
+        <tr class="data">
+          <td><input type="text" value="Cablexpress Corporation" /></td>
+          <td><input type="text" value="1(800)234-2121" /></td>
+          <td><input type="text" value="40" /></td>
+          <td><input type="text" value="Approved" /></td>
+        </tr>
+        <tr class="data">
+          <td><input type="text" value="Cablexpress Corporation" /></td>
+          <td><input type="text" value="1(800)234-2121" /></td>
+          <td><input type="text" value="40" /></td>
+          <td><input type="text" value="Approved" /></td>
+        </tr>
+        <tr class="data">
+          <td><input type="text" value="Cablexpress Corporation" /></td>
+          <td><input type="text" value="1(800)234-2121" /></td>
+          <td><input type="text" value="40" /></td>
+          <td><input type="text" value="Approved" /></td>
+        </tr>
+        <tr class="data">
+          <td><input type="text" value="Cablexpress Corporation" /></td>
+          <td><input type="text" value="1(800)234-2121" /></td>
+          <td><input type="text" value="40" /></td>
+          <td><input type="text" value="Approved" /></td>
+        </tr>
+      </tbody>
+    </table>
+<!--    <p-dataTable [value]="IVRList" [editable]="true">
+      <p-column *ngFor="let col of cols" [field]="col.field" [header]="col.header" [filter]="col.filter"
+                [filterPlaceholder]="col.placeholder" [editable]="col.editable"></p-column>
+    </p-dataTable>
+    <p-paginator rows="10" totalRecords="20" [rowsPerPageOptions]="[10,20,30]"
+                 (onPageChange)="paginate($event)"></p-paginator>-->
+  </div>
+</div>
+<!--Grid HTML start-->
+
+<!--Filter section HTML start-->
+<div [ngClass]="{ 'filter-menu': true, 'filterMove': filterMove, 'showFilterDiv' : showFilterDiv}">
+  <a class="filter-icon" (click)="showFilter()" *ngIf="filterIcon">
+    <span class="ti-filter"></span>
+  </a>
+
+  <a (click)="hideFilter()" class="arrow-icon">
+    <span class="ti-arrow-left"></span>
+  </a>
+
+  <form>
+    <div class="filter-title">
+      <h4>Priority</h4>
+    </div>
+    <ul class="half-column">
+      <li>
+        <p-checkbox name="group1" value="10" label="10" [(ngModel)]="selectedPriority"></p-checkbox>
+      </li>
+      <li>
+        <p-checkbox name="group1" value="20" label="20" [(ngModel)]="selectedPriority"></p-checkbox>
+      </li>
+      <li>
+        <p-checkbox name="group1" value="30" label="30" [(ngModel)]="selectedPriority"></p-checkbox>
+      </li>
+      <li>
+        <p-checkbox name="group1" value="40" label="40" [(ngModel)]="selectedPriority"></p-checkbox>
+      </li>
+      <li>
+        <p-checkbox name="group1" value="50" label="50" [(ngModel)]="selectedPriority"></p-checkbox>
+      </li>
+      <li>
+        <p-checkbox name="group1" value="100" label="100" [(ngModel)]="selectedPriority"></p-checkbox>
+      </li>
+    </ul>
+
+    <div class="clearfix"></div>
+
+    <div class="filter-title">
+      <h4>Status</h4>
+    </div>
+    <ul>
+      <li>
+        <p-checkbox name="group2" value="inProcess" label="In process" [(ngModel)]="selectedStatus"></p-checkbox>
+      </li>
+      <li>
+        <p-checkbox name="group2" value="finalized" label="Finalized" [(ngModel)]="selectedStatus"></p-checkbox>
+      </li>
+      <li>
+        <p-checkbox name="group2" value="pending" label="Pending" [(ngModel)]="selectedStatus"></p-checkbox>
+      </li>
+      <li>
+        <p-checkbox name="group2" value="approved" label="Approved" [(ngModel)]="selectedStatus"></p-checkbox>
+      </li>
+      <li>
+        <p-checkbox name="group2" value="notApprove" label="Not approve" [(ngModel)]="selectedStatus"></p-checkbox>
+      </li>
+    </ul>
+  </form>
+</div>
+<!--Filter section HTML over-->
